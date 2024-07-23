@@ -1,0 +1,41 @@
+{
+  // 编译器选项配置，用于指定TypeScript编译器如何处理源代码
+  "compilerOptions": {
+    // 目标JavaScript版本，此处为ES5
+    "target": "es5",
+    // 指定要包含的库文件，以便TypeScript能够理解这些库的类型
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // 允许使用JavaScript文件，而不仅仅是TypeScript文件
+    "allowJs": true,
+    // 跳过库文件的类型检查，以加快编译速度
+    "skipLibCheck": true,
+    // 启用ES模块的交互，以支持Node.js环境中的模块导入
+    "esModuleInterop": true,
+    // 允许默认导入非默认导出的模块
+    "allowSyntheticDefaultImports": true,
+    // 启用严格的类型检查
+    "strict": true,
+    // 要求文件名的大小写与实际文件系统中的大小写一致
+    "forceConsistentCasingInFileNames": true,
+    // 模块系统采用ESNext规范
+    "module": "esnext",
+    // 模块解析策略采用Node.js风格
+    "moduleResolution": "node",
+    // 自动解析JSON模块
+    "resolveJsonModule": true,
+    // 每个文件都被视为一个独立的模块，用于防止命名冲突
+    "isolatedModules": true,
+    // 不生成输出文件，仅进行类型检查和编译  ，为true时 可通过babel-loader编辑ts文件
+    "noEmit": false,
+    // JSX工厂函数采用React的创建元素方法
+    "jsx": "react"
+  },
+  // 指定需要包含进行类型检查和编译的文件夹
+  "include": [
+    "./src/**/*"
+  ]
+}
